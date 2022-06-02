@@ -1,0 +1,28 @@
+#Run makefile_DPI from within  /nfs/iil/proj/cnl/htd01/hvm_models_development/rtl/dgrebel/Small_model/Results/
+CC=/usr/intel/bin/gcc
+CFLAGS= -g -fPIC -Wall -pedantic -shared
+OBJ=Dror_unix_socket_server.c
+
+#Execution of simulation is done from /Small_model/Results
+run:
+	./simv
+#The resulting execution file is simv and is created within /Small_model/Results/
+simv: ./like_reader.sv  ./like_parser.svh   ./htd_dpi_lib.so
+	vcs -sverilog -full64 -debug_all  ./like_reader.sv   ./htd_dpi_lib.so  -o ./simv 
+#The Shared-object is created:
+htd_dpi_lib.so: ${OBJ}
+	${CC} ${CFLAGS} ${OBJ} -o ./htd_dpi_lib.so
+
+#Compiling client.c:
+client: ./client.c
+	${CC} ./client.c -o ./client
+
+
+
+
+
+
+
+
+
+

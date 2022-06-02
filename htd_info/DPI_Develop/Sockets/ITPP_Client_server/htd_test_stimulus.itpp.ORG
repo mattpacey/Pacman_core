@@ -1,0 +1,436 @@
+rem: comment: Start Flow HVM_SIMPLE_RESET_FLOW_A 1 
+rem: wait 10000 ps
+rem: comment:  Start Action PwrGoodDeAssert  
+rem: force_signal soc_tb.soc.xxpwrgood 0x0 
+rem: comment:  Start Action ResetAsser  
+rem: force_signal soc_tb.soc.xxresetb 0x0 
+rem: comment:  Start Action StallBootFsm  
+rem: force_signal soc_tb.soc.xxnoab[15:0] 0xeffe 
+rem: comment:  Start Action VccStPwrGoodDeAssert  
+rem: force_signal soc_tb.soc.xxvccstpwrgood 0x0 
+rem: comment:  Start Action Wait150B4VccStPwrGood  
+rem: wait 1500000 ps
+rem: comment:  Start Action VccStPwrGoodAssert  
+rem: force_signal soc_tb.soc.xxvccstpwrgood 0x1 
+rem: comment:  Start Action Wait150AfterVccStPwrGood  
+rem: wait 1500000 ps
+rem: comment:  Start Action LgcioMiscTapClean  
+rem: force_signal soc_tb.soc.par_punit.mdu.cltap.LGCIO_MISC_TAP_tdo_out 0x0 
+rem: comment:  Start Action CduCcfTapClean  
+rem: force_signal soc_tb.soc.par_punit.mdu.cltap.CDU_CCF_TAP_tdo_out 0x0 
+rem: comment:  Start Action CheckCpuIsoStatus  
+scani: 000010110000
+to_state: Run-Test/Idle 
+label: StartIr_LGCIO_PCH_DFX_TAP_PCH_CPUISOSTATUS@0,EndIr_LGCIO_PCH_DFX_TAP_PCH_CPUISOSTATUS@7
+scand: 00011110, XXXXXXXX
+to_state: Run-Test/Idle 
+scani: 000010110001
+to_state: Run-Test/Idle 
+label: EndDr_LGCIO_PCH_DFX_TAP_PCH_CPUISOSTATUS@30,StartDr_LGCIO_PCH_DFX_TAP_PCH_CPUISOSTATUS@14
+scand: 0000000000000000000000000000000, LXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+to_state: Run-Test/Idle 
+to_state: Run-Test/Idle 
+rem: wait 30000 ps
+rem: wait 10000 ps
+rem: comment:  Start Action CpuIsolation  
+scani: 000010110000
+to_state: Run-Test/Idle 
+label: StartIr_LGCIO_PCH_DFX_TAP_PCH_CPUISOCFG@0,EndIr_LGCIO_PCH_DFX_TAP_PCH_CPUISOCFG@7
+scand: 00011101, XXXXXXXX
+to_state: Run-Test/Idle 
+scani: 000010110001
+to_state: Run-Test/Idle 
+label: StartDr_LGCIO_PCH_DFX_TAP_PCH_CPUISOCFG@14,EndDr_LGCIO_PCH_DFX_TAP_PCH_CPUISOCFG@55
+scand: 00000000000000000101111110111111110010010100000000000000, XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+to_state: Run-Test/Idle 
+to_state: Run-Test/Idle 
+rem: wait 30000 ps
+rem: wait 10000 ps
+rem: comment:  Start Action Wait10CpuIsoStable  
+rem: wait 100000 ps
+rem: comment:  Start Action CpuIsolationWithPwrGood  
+scani: 000010110000
+to_state: Run-Test/Idle 
+label: StartIr_LGCIO_PCH_DFX_TAP_PCH_CPUISOCFG@0,EndIr_LGCIO_PCH_DFX_TAP_PCH_CPUISOCFG@7
+scand: 00011101, XXXXXXXX
+to_state: Run-Test/Idle 
+scani: 000010110001
+to_state: Run-Test/Idle 
+label: StartDr_LGCIO_PCH_DFX_TAP_PCH_CPUISOCFG@14,EndDr_LGCIO_PCH_DFX_TAP_PCH_CPUISOCFG@55
+scand: 00000000000000000101111110111111110110010100000000000000, XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+to_state: Run-Test/Idle 
+to_state: Run-Test/Idle 
+rem: wait 30000 ps
+rem: wait 10000 ps
+rem: comment:  Start Action CheckTapStatus_TapPwrGoodAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.mdu.cltap.TAPSTATUS_RegTnnnH.TAP_POWERGOOD 0x1 
+rem: comment:  Start Action CheckTapStatus_VccSaPwrGgodDeassert  
+rem:  peek_signal  soc_tb.soc.par_punit.mdu.cltap.TAPSTATUS_RegTnnnH.VCCSA_POWERGGOD 0x0 
+rem: comment:  Start Action CheckTapStatus_VccSaGPcuPwrGgodDeassert  
+rem:  peek_signal  soc_tb.soc.par_punit.mdu.cltap.TAPSTATUS_RegTnnnH.VCCSAGPCU_POWERGGOD 0x0 
+rem: comment:  Start Action CheckTapStatus_VccSaGMemPwrGgodDeassert  
+rem:  peek_signal  soc_tb.soc.par_punit.mdu.cltap.TAPSTATUS_RegTnnnH.VCCSAGMEM_POWERGGOD 0x0 
+rem: comment:  Start Action CheckTapStatus_VccSaGEflwPwrGgodDeassert  
+rem:  peek_signal  soc_tb.soc.par_punit.mdu.cltap.TAPSTATUS_RegTnnnH.VCCSAGEFLW_POWERGGOD 0x0 
+rem: comment:  Start Action CheckTapStatus_VccSaGEtgsPwrGgodDeassert  
+rem:  peek_signal  soc_tb.soc.par_punit.mdu.cltap.TAPSTATUS_RegTnnnH.VCCSAGETGS_POWERGGOD 0x0 
+rem: comment:  Start Action CheckTapStatus_VccIoPwrGgodDeassert  
+rem:  peek_signal  soc_tb.soc.par_punit.mdu.cltap.TAPSTATUS_RegTnnnH.VCCIO_POWERGGOD 0x0 
+rem: comment:  Start Action CheckTapStatus_VccIoGDmOpiPwrGgodDeassert  
+rem:  peek_signal  soc_tb.soc.par_punit.mdu.cltap.TAPSTATUS_RegTnnnH.VCCIOGDMOPI_POWERGGOD 0x0 
+rem: comment:  Start Action CheckTapStatus_VccRingPwrGgodDeassert  
+rem:  peek_signal  soc_tb.soc.par_punit.mdu.cltap.TAPSTATUS_RegTnnnH.VCCRING_POWERGGOD 0x0 
+rem: comment:  Start Action CheckTapStatus_RedUnlockDeassert  
+rem:  peek_signal  soc_tb.soc.par_punit.mdu.cltap.TAPSTATUS_RegTnnnH.RED_UNLOCK 0x0 
+rem: comment:  Start Action DfxAggRstb  
+label: StartIr_CLTAP_DFX_AGG_CTL@0,EndIr_CLTAP_DFX_AGG_CTL@11
+scani: 000101110000
+to_state: Run-Test/Idle 
+label: StartDr_CLTAP_DFX_AGG_CTL@0,EndDr_CLTAP_DFX_AGG_CTL@3
+scand: 0011, XXXX
+to_state: Run-Test/Idle 
+to_state: Run-Test/Idle 
+rem: poll_signal  soc_tb.soc.par_punit.mdu.cltap.DFX_AGG_CTL_RegTnnnH.DFX_AGG_RESETB 0x1 1000000 ps
+rem: poll_signal  soc_tb.soc.par_punit.mdu.cltap.DFX_AGG_CTL_RegTnnnH.DFX_AGG_AO_STRAP 0x1 1000000 ps
+rem: wait 30000 ps
+rem: wait 10000 ps
+rem: comment:  Start Action MetalTapUnlock  
+scani: 000010100000
+to_state: Run-Test/Idle 
+label: StartIr_MDU_DFX_AGG_TAP_PHTM_CRK_UNLOCK_L@0,EndIr_MDU_DFX_AGG_TAP_PHTM_CRK_UNLOCK_L@7
+scand: 0001000011, XXXXXXXXXX
+to_state: Run-Test/Idle 
+scani: 000010100001
+to_state: Run-Test/Idle 
+label: EndDr_MDU_DFX_AGG_TAP_PHTM_CRK_UNLOCK_L@77,StartDr_MDU_DFX_AGG_TAP_PHTM_CRK_UNLOCK_L@14
+scand: 00000000000000000000000000000000001011100101001110011101110001110100000000000000, XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+to_state: Run-Test/Idle 
+to_state: Run-Test/Idle 
+rem: wait 30000 ps
+rem: wait 10000 ps
+rem: comment:  Start Action CheckTapUnlock  
+rem: poll_signal  soc_tb.soc.par_punit.mdu.dfx_agg.tap_MetalUnlock 0x1 1000000 ps
+rem: comment:  Start Action EARAssert  
+rem: force_signal soc_tb.soc.xxnoab[0:0] 0x1 
+rem: comment:  Start Action Wait10AfterEARAssert  
+rem: wait 100000 ps
+rem: comment:  Start Action EARDeAssert  
+rem: force_signal soc_tb.soc.xxnoab[0:0] 0x0 
+rem: comment:  Start Action Wait20AfterEARDeAssert  
+rem: wait 200000 ps
+rem: comment:  Start Action IsoStatusCheck  
+scani: 000010110000
+to_state: Run-Test/Idle 
+label: StartIr_LGCIO_PCH_DFX_TAP_PCH_CPUISOSTATUS@0,EndIr_LGCIO_PCH_DFX_TAP_PCH_CPUISOSTATUS@7
+scand: 00011110, XXXXXXXX
+to_state: Run-Test/Idle 
+scani: 000010110001
+to_state: Run-Test/Idle 
+label: EndDr_LGCIO_PCH_DFX_TAP_PCH_CPUISOSTATUS@30,StartDr_LGCIO_PCH_DFX_TAP_PCH_CPUISOSTATUS@14
+scand: 1000000000000000000000000000000, HXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+to_state: Run-Test/Idle 
+to_state: Run-Test/Idle 
+rem: wait 30000 ps
+rem: wait 10000 ps
+rem: comment:  Start Action Wait4BootFsmEarlyBoot  
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.pcusapmbootfsm.SAPMBootFsmStateX24XnnnH[5:0] 0x16 1000000 ps
+rem: comment:  Start Action WaitAfterEarlyBoot  
+rem: wait 100000 ps
+rem: comment:  Start Action Wait4EalyBootFusePullDone  
+rem: poll_signal  soc_tb.soc.par_punit.mdu.dfx_agg.early_boot_fuse_pull_done 0x1 1000000 ps
+rem: comment:  Start Action WaitAfterFusePullDone  
+rem: wait 100000 ps
+rem: comment:  Start Action DfxAggrResumeBootFSM  
+scani: 000010100000
+to_state: Run-Test/Idle 
+label: StartIr_MDU_DFX_AGG_TAP_BOOTCTRL_CSR@0,EndIr_MDU_DFX_AGG_TAP_BOOTCTRL_CSR@7
+scand: 0001010010, XXXXXXXXXX
+to_state: Run-Test/Idle 
+scani: 000010100001
+to_state: Run-Test/Idle 
+label: EndDr_MDU_DFX_AGG_TAP_BOOTCTRL_CSR@45,StartDr_MDU_DFX_AGG_TAP_BOOTCTRL_CSR@14
+scand: 00000000000000000000000000000001100000000000000, XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+to_state: Run-Test/Idle 
+to_state: Run-Test/Idle 
+rem: wait 30000 ps
+rem: wait 10000 ps
+rem: comment:  Start Action Wait4AggrResumeBootFSM  
+rem: poll_signal  soc_tb.soc.par_punit.mdu.dfx_agg.i_dfx_agg_phtmcrk_tapreg.BOOT_CTRL_data_in[31:0] 0x3 1000000 ps
+rem: comment:  Start Action Wait4BootFsmDeassertReset  
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.pcusapmbootfsm.SAPMBootFsmStateX24XnnnH[5:0] 0xe 5000000 ps
+rem: comment:  Start Action Wait4BootFsmPrePcodeWake  
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.pcusapmbootfsm.SAPMBootFsmStateX24XnnnH[5:0] 0x11 5000000 ps
+rem: comment:  Start Action SAGNPKFsmCtrlForceOn  
+scani: 000001011100
+to_state: Run-Test/Idle 
+label: StartIr_PUNIT_DFX_TAP_SAGNPK_PG_FSM_CTRL@0,EndIr_PUNIT_DFX_TAP_SAGNPK_PG_FSM_CTRL@7
+scand: 00111100, XXXXXXXX
+to_state: Run-Test/Idle 
+scani: 000001011101
+to_state: Run-Test/Idle 
+label: EndDr_PUNIT_DFX_TAP_SAGNPK_PG_FSM_CTRL@25,StartDr_PUNIT_DFX_TAP_SAGNPK_PG_FSM_CTRL@14
+scand: 00000010111000000000000000, XXXXXXXXXXXXXXXXXXXXXXXXXX
+to_state: Run-Test/Idle 
+to_state: Run-Test/Idle 
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGNPK_PG_FSM_CTRL_RegTnnnH.PG_FSM_CTRL.DFT_PWRGOODOVERRIDEVAL 0x0 1000000 ps
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGNPK_PG_FSM_CTRL_RegTnnnH.PG_FSM_CTRL.DFT_PWRGOODOVERRIDEEN 0x1 1000000 ps
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGNPK_PG_FSM_CTRL_RegTnnnH.PG_FSM_CTRL.DFT_FORCEONOVERRIDEEN 0x1 1000000 ps
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGNPK_PG_FSM_CTRL_RegTnnnH.PG_FSM_CTRL.DFT_FORCEONOVERRIDEVAL 0x1 1000000 ps
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGNPK_PG_FSM_CTRL_RegTnnnH.PG_FSM_CTRL.DFT_POWERUPOVERRIDEEN 0x1 1000000 ps
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGNPK_PG_FSM_CTRL_RegTnnnH.PG_FSM_CTRL.DFT_POWERUPOVERRIDEVAL 0x0 1000000 ps
+rem: wait 30000 ps
+rem: wait 10000 ps
+rem: comment:  Start Action SAGNPKFsmCtrlForceOnPwrGood  
+scani: 000001011100
+to_state: Run-Test/Idle 
+label: StartIr_PUNIT_DFX_TAP_SAGNPK_PG_FSM_CTRL@0,EndIr_PUNIT_DFX_TAP_SAGNPK_PG_FSM_CTRL@7
+scand: 00111100, XXXXXXXX
+to_state: Run-Test/Idle 
+scani: 000001011101
+to_state: Run-Test/Idle 
+label: EndDr_PUNIT_DFX_TAP_SAGNPK_PG_FSM_CTRL@25,StartDr_PUNIT_DFX_TAP_SAGNPK_PG_FSM_CTRL@14
+scand: 00000110111000000000000000, XXXXXXXXXXXXXXXXXXXXXXXXXX
+to_state: Run-Test/Idle 
+to_state: Run-Test/Idle 
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGNPK_PG_FSM_CTRL_RegTnnnH.PG_FSM_CTRL.DFT_PWRGOODOVERRIDEVAL 0x1 1000000 ps
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGNPK_PG_FSM_CTRL_RegTnnnH.PG_FSM_CTRL.DFT_PWRGOODOVERRIDEEN 0x1 1000000 ps
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGNPK_PG_FSM_CTRL_RegTnnnH.PG_FSM_CTRL.DFT_FORCEONOVERRIDEEN 0x1 1000000 ps
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGNPK_PG_FSM_CTRL_RegTnnnH.PG_FSM_CTRL.DFT_FORCEONOVERRIDEVAL 0x1 1000000 ps
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGNPK_PG_FSM_CTRL_RegTnnnH.PG_FSM_CTRL.DFT_POWERUPOVERRIDEEN 0x1 1000000 ps
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGNPK_PG_FSM_CTRL_RegTnnnH.PG_FSM_CTRL.DFT_POWERUPOVERRIDEVAL 0x0 1000000 ps
+rem: wait 30000 ps
+rem: wait 10000 ps
+rem: comment:  Start Action SAGGMMFsmCtrlForceOn  
+scani: 000001011100
+to_state: Run-Test/Idle 
+label: StartIr_PUNIT_DFX_TAP_SAGGMM_PG_FSM_CTRL@0,EndIr_PUNIT_DFX_TAP_SAGGMM_PG_FSM_CTRL@7
+scand: 00111001, XXXXXXXX
+to_state: Run-Test/Idle 
+scani: 000001011101
+to_state: Run-Test/Idle 
+label: EndDr_PUNIT_DFX_TAP_SAGGMM_PG_FSM_CTRL@25,StartDr_PUNIT_DFX_TAP_SAGGMM_PG_FSM_CTRL@14
+scand: 00000010111000000000000000, XXXXXXXXXXXXXXXXXXXXXXXXXX
+to_state: Run-Test/Idle 
+to_state: Run-Test/Idle 
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGGMM_PG_FSM_CTRL_RegTnnnH.PG_FSM_CTRL.DFT_PWRGOODOVERRIDEVAL 0x0 1000000 ps
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGGMM_PG_FSM_CTRL_RegTnnnH.PG_FSM_CTRL.DFT_PWRGOODOVERRIDEEN 0x1 1000000 ps
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGGMM_PG_FSM_CTRL_RegTnnnH.PG_FSM_CTRL.DFT_FORCEONOVERRIDEEN 0x1 1000000 ps
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGGMM_PG_FSM_CTRL_RegTnnnH.PG_FSM_CTRL.DFT_FORCEONOVERRIDEVAL 0x1 1000000 ps
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGGMM_PG_FSM_CTRL_RegTnnnH.PG_FSM_CTRL.DFT_POWERUPOVERRIDEEN 0x1 1000000 ps
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGGMM_PG_FSM_CTRL_RegTnnnH.PG_FSM_CTRL.DFT_POWERUPOVERRIDEVAL 0x0 1000000 ps
+rem: wait 30000 ps
+rem: wait 10000 ps
+rem: comment:  Start Action SAGGMMFsmCtrlForceOnPwrGood  
+scani: 000001011100
+to_state: Run-Test/Idle 
+label: StartIr_PUNIT_DFX_TAP_SAGGMM_PG_FSM_CTRL@0,EndIr_PUNIT_DFX_TAP_SAGGMM_PG_FSM_CTRL@7
+scand: 00111001, XXXXXXXX
+to_state: Run-Test/Idle 
+scani: 000001011101
+to_state: Run-Test/Idle 
+label: EndDr_PUNIT_DFX_TAP_SAGGMM_PG_FSM_CTRL@25,StartDr_PUNIT_DFX_TAP_SAGGMM_PG_FSM_CTRL@14
+scand: 00000110111000000000000000, XXXXXXXXXXXXXXXXXXXXXXXXXX
+to_state: Run-Test/Idle 
+to_state: Run-Test/Idle 
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGGMM_PG_FSM_CTRL_RegTnnnH.PG_FSM_CTRL.DFT_PWRGOODOVERRIDEVAL 0x1 1000000 ps
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGGMM_PG_FSM_CTRL_RegTnnnH.PG_FSM_CTRL.DFT_PWRGOODOVERRIDEEN 0x1 1000000 ps
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGGMM_PG_FSM_CTRL_RegTnnnH.PG_FSM_CTRL.DFT_FORCEONOVERRIDEEN 0x1 1000000 ps
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGGMM_PG_FSM_CTRL_RegTnnnH.PG_FSM_CTRL.DFT_FORCEONOVERRIDEVAL 0x1 1000000 ps
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGGMM_PG_FSM_CTRL_RegTnnnH.PG_FSM_CTRL.DFT_POWERUPOVERRIDEEN 0x1 1000000 ps
+rem: poll_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGGMM_PG_FSM_CTRL_RegTnnnH.PG_FSM_CTRL.DFT_POWERUPOVERRIDEVAL 0x0 1000000 ps
+rem: wait 30000 ps
+rem: wait 10000 ps
+rem: comment:  Start Action ClReadTapStatusCsrAfterMetalUnlock  
+scani: 000010100000
+to_state: Run-Test/Idle 
+label: StartIr_MDU_DFX_AGG_TAP_STATUS_CSR@0,EndIr_MDU_DFX_AGG_TAP_STATUS_CSR@7
+scand: 0001010001, XXXXXXXXXX
+to_state: Run-Test/Idle 
+scani: 000010100001
+to_state: Run-Test/Idle 
+label: EndDr_MDU_DFX_AGG_TAP_STATUS_CSR@77,StartDr_MDU_DFX_AGG_TAP_STATUS_CSR@14
+scand: 0000000000000000000000000000100010000000000000010000000000100000000000000000000, XXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXHLLLLLLLLLLLLLLHLXXXXXXXXXHXXXXXXXXXXXXXXXXXXXX
+to_state: Run-Test/Idle 
+to_state: Run-Test/Idle 
+rem: wait 30000 ps
+rem: wait 10000 ps
+rem: comment:  Start Action ClReadTapStatusAfterMetalUnlock  
+label: StartIr_CLTAP_TAPSTATUS@0,EndIr_CLTAP_TAPSTATUS@11
+scani: 000011000101
+to_state: Run-Test/Idle 
+label: StartDr_CLTAP_TAPSTATUS@0,EndDr_CLTAP_TAPSTATUS@12
+scand: 0001011001111, XXXHLHHLLHHHH
+to_state: Run-Test/Idle 
+to_state: Run-Test/Idle 
+rem: wait 30000 ps
+rem: wait 10000 ps
+rem: comment:  Start Action PgcbGmmOvrd  
+scani: 000010000000
+to_state: Run-Test/Idle 
+label: StartIr_CDU_GMM_TAP_PGCB_GMM_PGCB@0,EndIr_CDU_GMM_TAP_PGCB_GMM_PGCB@7
+scand: 00011111, XXXXXXXX
+to_state: Run-Test/Idle 
+scani: 000010000001
+to_state: Run-Test/Idle 
+label: StartDr_CDU_GMM_TAP_PGCB_GMM_PGCB@14,EndDr_CDU_GMM_TAP_PGCB_GMM_PGCB@15
+scand: 1000000000000000, XXXXXXXXXXXXXXXX
+to_state: Run-Test/Idle 
+to_state: Run-Test/Idle 
+rem: poll_signal  soc_tb.soc.par_gmm.cdu_gmm.cdu_gmm_tap.PGCB_GMM_PGCB_RegTnnnH.FDFX_PGCB_BYPASS 0x1 10000000 ps
+rem: wait 30000 ps
+rem: wait 10000 ps
+rem: comment:  Start Action PgcbFuseDrngOvrd  
+scani: 000010010000
+to_state: Run-Test/Idle 
+label: StartIr_CDU_FUSE_TAP_PGCB_FUSE_DRNG_PGCB@0,EndIr_CDU_FUSE_TAP_PGCB_FUSE_DRNG_PGCB@7
+scand: 00100010, XXXXXXXX
+to_state: Run-Test/Idle 
+scani: 000010010001
+to_state: Run-Test/Idle 
+label: StartDr_CDU_FUSE_TAP_PGCB_FUSE_DRNG_PGCB@14,EndDr_CDU_FUSE_TAP_PGCB_FUSE_DRNG_PGCB@15
+scand: 1000000000000000, XXXXXXXXXXXXXXXX
+to_state: Run-Test/Idle 
+to_state: Run-Test/Idle 
+rem: poll_signal  soc_tb.soc.par_fuse.cdu_fuse.cdu_fuse_tap.PGCB_FUSE_DRNG_PGCB_RegTnnnH.FDFX_PGCB_BYPASS 0x1 10000000 ps
+rem: wait 30000 ps
+rem: wait 10000 ps
+rem: comment:  Start Action PgcbFuseOvrd  
+scani: 000010010000
+to_state: Run-Test/Idle 
+label: StartIr_CDU_FUSE_TAP_PGCB_FUSE_PGCB@0,EndIr_CDU_FUSE_TAP_PGCB_FUSE_PGCB@7
+scand: 00011001, XXXXXXXX
+to_state: Run-Test/Idle 
+scani: 000010010001
+to_state: Run-Test/Idle 
+label: StartDr_CDU_FUSE_TAP_PGCB_FUSE_PGCB@14,EndDr_CDU_FUSE_TAP_PGCB_FUSE_PGCB@15
+scand: 1000000000000000, XXXXXXXXXXXXXXXX
+to_state: Run-Test/Idle 
+to_state: Run-Test/Idle 
+rem: poll_signal  soc_tb.soc.par_fuse.cdu_fuse.cdu_fuse_tap.PGCB_FUSE_PGCB_RegTnnnH.FDFX_PGCB_BYPASS 0x1 10000000 ps
+rem: wait 30000 ps
+rem: wait 10000 ps
+rem: comment:  Start Action PgcbNpkVnnOvrd  
+scani: 000010100100
+to_state: Run-Test/Idle 
+label: StartIr_CDU_NPK_TAP_PGCB_NPK_VNN_PGCB@0,EndIr_CDU_NPK_TAP_PGCB_NPK_VNN_PGCB@7
+scand: 00011001, XXXXXXXX
+to_state: Run-Test/Idle 
+scani: 000010100101
+to_state: Run-Test/Idle 
+label: StartDr_CDU_NPK_TAP_PGCB_NPK_VNN_PGCB@14,EndDr_CDU_NPK_TAP_PGCB_NPK_VNN_PGCB@15
+scand: 1000000000000000, XXXXXXXXXXXXXXXX
+to_state: Run-Test/Idle 
+to_state: Run-Test/Idle 
+rem: poll_signal  soc_tb.soc.par_npk.cdu_npk.cdu_npk_tap.PGCB_NPK_VNN_PGCB_RegTnnnH.FDFX_PGCB_BYPASS 0x1 10000000 ps
+rem: wait 30000 ps
+rem: wait 10000 ps
+rem: comment:  Start Action PgcbPsf0Ovrd  
+scani: 000000111100
+to_state: Run-Test/Idle 
+label: StartIr_CDU_PSF0_TAP_PGCB_PSF0_PGCB@0,EndIr_CDU_PSF0_TAP_PGCB_PSF0_PGCB@7
+scand: 00011000, XXXXXXXX
+to_state: Run-Test/Idle 
+scani: 000000111101
+to_state: Run-Test/Idle 
+label: StartDr_CDU_PSF0_TAP_PGCB_PSF0_PGCB@14,EndDr_CDU_PSF0_TAP_PGCB_PSF0_PGCB@15
+scand: 1000000000000000, XXXXXXXXXXXXXXXX
+to_state: Run-Test/Idle 
+to_state: Run-Test/Idle 
+rem: poll_signal  soc_tb.soc.par_psf0.cdu_psf0.cdu_psf0_tap.PGCB_PSF0_PGCB_RegTnnnH.FDFX_PGCB_BYPASS 0x1 10000000 ps
+rem: wait 30000 ps
+rem: wait 10000 ps
+rem: comment:  Start Action PgcbPsf1Ovrd  
+scani: 000100000100
+to_state: Run-Test/Idle 
+label: StartIr_CDU_PSF1_TAP_PGCB_PSF1_PGCB@0,EndIr_CDU_PSF1_TAP_PGCB_PSF1_PGCB@7
+scand: 00011001, XXXXXXXX
+to_state: Run-Test/Idle 
+scani: 000100000101
+to_state: Run-Test/Idle 
+label: StartDr_CDU_PSF1_TAP_PGCB_PSF1_PGCB@14,EndDr_CDU_PSF1_TAP_PGCB_PSF1_PGCB@15
+scand: 1000000000000000, XXXXXXXXXXXXXXXX
+to_state: Run-Test/Idle 
+to_state: Run-Test/Idle 
+rem: poll_signal  soc_tb.soc.par_psf1.cdu_psf1.cdu_psf1_tap.PGCB_PSF1_PGCB_RegTnnnH.FDFX_PGCB_BYPASS 0x1 10000000 ps
+rem: wait 30000 ps
+rem: wait 10000 ps
+rem: comment:  Start Action PgcbDrngPunitOvrd  
+label: StartIr_CLTAP_PGCB_DRNG_PUNIT_PGCB@0,EndIr_CLTAP_PGCB_DRNG_PUNIT_PGCB@11
+scani: 000101110010
+to_state: Run-Test/Idle 
+label: StartDr_CLTAP_PGCB_DRNG_PUNIT_PGCB@0,EndDr_CLTAP_PGCB_DRNG_PUNIT_PGCB@1
+scand: 10, XX
+to_state: Run-Test/Idle 
+to_state: Run-Test/Idle 
+rem: poll_signal  soc_tb.soc.par_punit.mdu.cltap.PGCB_DRNG_PUNIT_PGCB_RegTnnnH.FDFX_PGCB_BYPASS 0x1 10000000 ps
+rem: wait 30000 ps
+rem: wait 10000 ps
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.gl2saExtVccSTPwrGoodXnnnH 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.pcuSTGPwrGoodXnnnH 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.pcuIOPwrGoodXnnnH 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.pcuSAPwrGoodXnnnH 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.pcuSAPwrGoodXnnnH_on_vccsa 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.pcuIOGDMOPIPwrGoodXnnnH 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.pcuSAGMEMPwrGoodXnnnH 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.pcuSAGMEMPwrGoodXnnnH 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.IOGDMOPIVccPwrgood_XX70nH 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGMEMVccPwrgood_XX70nH 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.SAGPCUVccPwrgood_XX70nH 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.iogdmopi_12dg_powergatefsm.GatedDomainVccPwrgood 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.iogdmopi_12dg_powergatefsm.ForceOn 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.sagmem_12dg_powergatefsm.GatedDomainVccPwrgood 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.sagmem_12dg_powergatefsm.ForceOn 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.sagmem_dist_8dg_powergatefsm.GatedDomainVccPwrgood 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.sagmem_dist_8dg_powergatefsm.ForceOn 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.saggmm_8dg_powergatefsm.GatedDomainVccPwrgood 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.saggmm_8dg_powergatefsm.ForceOn 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.sagpsf0_8dg_powergatefsm.GatedDomainVccPwrgood 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.sagpsf0_8dg_powergatefsm.ForceOn 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.sagpsf1_8dg_powergatefsm.GatedDomainVccPwrgood 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.sagpsf1_8dg_powergatefsm.ForceOn 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.sagpcu_8dg_powergatefsm.GatedDomainVccPwrgood 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.sagpcu_8dg_powergatefsm.ForceOn 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.sagnpk_8dg_powergatefsm.GatedDomainVccPwrgood 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.sagnpk_8dg_powergatefsm.ForceOn 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.stgnpk_8dg_powergatefsm.GatedDomainVccPwrgood 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.stgnpk_8dg_powergatefsm.ForceOn 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.stlgfuse_8dg_powergatefsm.GatedDomainVccPwrgood 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.stlgfuse_8dg_powergatefsm.ForceOn 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.stlgdrng_8dg_powergatefsm.GatedDomainVccPwrgood 0x1 
+rem: comment:  Start Action CheckPunitSignalAssert  
+rem:  peek_signal  soc_tb.soc.par_punit.punit.ptpcbclk.stlgdrng_8dg_powergatefsm.ForceOn 0x1 
+rem: wait 10000 ps
+rem: comment: End Flow HVM_SIMPLE_RESET_FLOW_A 1 
+rem: comment: End of sequence 

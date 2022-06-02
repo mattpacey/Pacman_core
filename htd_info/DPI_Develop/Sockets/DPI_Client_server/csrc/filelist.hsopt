@@ -1,0 +1,13 @@
+rmapats_mop.o: rmapats.m
+	@/p/hdk/rtl/cad/x86-64_linux30/synopsys/vcsmx/H-2013.06-SP1-15-T0513/suse64/bin/cgmop1 -pic -gen_obj rmapats.m rmapats_mop.o
+
+rmapats.o: rmapats.c
+	@$(CC) $(CFLAGS) -c  -o rmapats.o rmapats.c
+rmapats%.o: rmapats%.c
+	@$(CC) $(CFLAGS) -c  -o $@ $<
+rmar.o: rmar.c
+	@$(CC) $(CFLAGS) -c  -o rmar.o rmar.c
+rmar%.o: rmar%.c
+	@$(CC) $(CFLAGS) -c  -o $@ $<
+
+include filelist.hsopt.objs

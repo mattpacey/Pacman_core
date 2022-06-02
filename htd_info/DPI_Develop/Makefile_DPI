@@ -1,0 +1,21 @@
+CC=/usr/intel/bin/gcc
+CFLAGS= -g -fPIC -Wall -pedantic -shared
+OBJ=${HTD_ROOT}/htd_info/htd_unix_socket_server.c
+
+run:
+	./simv
+
+simv: ${HTD_ROOT}/htd_info/DPI_Develop/cnlcc-No-model/like_reader.sv ${HTD_ROOT}/htd_info/DPI_Develop/cnlcc-No-model/like_parser.svh ./htd_dpi_lib.so
+	vcs -sverilog -full64 -debug_all  ${HTD_ROOT}/htd_info/DPI_Develop/cnlcc-No-model/like_reader.sv  ./htd_dpi_lib.so -o ./simv 
+
+htd_dpi_lib.so: ${OBJ}
+	${CC} ${CFLAGS} ${OBJ} -o ./htd_dpi_lib.so
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,254 @@
+\begin{theindex}
+
+  \item hpl\_tap \textit{(module)}, \hyperpage{2}
+    \subitem hpl\_tap.HplTap \textit{(class)}, \hyperpage{2}
+      \subsubitem hpl\_tap.HplTap.\_\_init\_\_ \textit{(method)}, 
+		\hyperpage{2}
+      \subsubitem hpl\_tap.HplTap.send\_cmd \textit{(method)}, 
+		\hyperpage{2}
+      \subsubitem hpl\_tap.HplTap.ShiftIr \textit{(method)}, 
+		\hyperpage{2}
+  \item hpl\_tap\_dfx\_api \textit{(module)}, \hyperpage{3--4}
+    \subitem hpl\_tap\_dfx\_api.HplTapDfxApi \textit{(class)}, 
+		\hyperpage{3--4}
+      \subsubitem hpl\_tap\_dfx\_api.HplTapDfxApi.close \textit{(method)}, 
+		\hyperpage{3}
+      \subsubitem hpl\_tap\_dfx\_api.HplTapDfxApi.get\_dr\_total\_length \textit{(method)}, 
+		\hyperpage{4}
+      \subsubitem hpl\_tap\_dfx\_api.HplTapDfxApi.get\_field\_lsb \textit{(method)}, 
+		\hyperpage{3}
+      \subsubitem hpl\_tap\_dfx\_api.HplTapDfxApi.get\_field\_msb \textit{(method)}, 
+		\hyperpage{3}
+      \subsubitem hpl\_tap\_dfx\_api.HplTapDfxApi.get\_field\_reset\_value \textit{(method)}, 
+		\hyperpage{3}
+      \subsubitem hpl\_tap\_dfx\_api.HplTapDfxApi.get\_final\_data\_register \textit{(method)}, 
+		\hyperpage{4}
+      \subsubitem hpl\_tap\_dfx\_api.HplTapDfxApi.get\_full\_dr \textit{(method)}, 
+		\hyperpage{4}
+      \subsubitem hpl\_tap\_dfx\_api.HplTapDfxApi.get\_full\_dr\_old \textit{(method)}, 
+		\hyperpage{4}
+      \subsubitem hpl\_tap\_dfx\_api.HplTapDfxApi.get\_ir\_fields \textit{(method)}, 
+		\hyperpage{4}
+      \subsubitem hpl\_tap\_dfx\_api.HplTapDfxApi.get\_ir\_name \textit{(method)}, 
+		\hyperpage{4}
+      \subsubitem hpl\_tap\_dfx\_api.HplTapDfxApi.get\_ir\_opcode\_int \textit{(method)}, 
+		\hyperpage{4}
+      \subsubitem hpl\_tap\_dfx\_api.HplTapDfxApi.get\_ir\_opcode\_string \textit{(method)}, 
+		\hyperpage{4}
+      \subsubitem hpl\_tap\_dfx\_api.HplTapDfxApi.get\_ir\_size \textit{(method)}, 
+		\hyperpage{4}
+      \subsubitem hpl\_tap\_dfx\_api.HplTapDfxApi.get\_rtl\_endpoint \textit{(method)}, 
+		\hyperpage{4}
+      \subsubitem hpl\_tap\_dfx\_api.HplTapDfxApi.get\_tap\_PARDR \textit{(method)}, 
+		\hyperpage{4}
+      \subsubitem hpl\_tap\_dfx\_api.HplTapDfxApi.get\_tap\_PARIR \textit{(method)}, 
+		\hyperpage{4}
+      \subsubitem hpl\_tap\_dfx\_api.HplTapDfxApi.get\_tap\_SERDR \textit{(method)}, 
+		\hyperpage{4}
+      \subsubitem hpl\_tap\_dfx\_api.HplTapDfxApi.get\_tap\_SERIR \textit{(method)}, 
+		\hyperpage{4}
+      \subsubitem hpl\_tap\_dfx\_api.HplTapDfxApi.get\_tap\_transactions \textit{(method)}, 
+		\hyperpage{4}
+      \subsubitem hpl\_tap\_dfx\_api.HplTapDfxApi.remove\_last\_line\_from\_string \textit{(method)}, 
+		\hyperpage{3}
+      \subsubitem hpl\_tap\_dfx\_api.HplTapDfxApi.send\_receive\_message \textit{(method)}, 
+		\hyperpage{3}
+  \item hpl\_tap\_engine \textit{(module)}, \hyperpage{5--8}
+    \subitem hpl\_tap\_engine.hpl\_TapEngine\_taplink \textit{(class)}, 
+		\hyperpage{6--7}
+      \subsubitem hpl\_tap\_engine.hpl\_TapEngine\_taplink.verify\_tap\_eptarget \textit{(method)}, 
+		\hyperpage{7}
+    \subitem hpl\_tap\_engine.hpl\_TapEngine\_tapnetwork \textit{(class)}, 
+		\hyperpage{7--8}
+      \subsubitem hpl\_tap\_engine.hpl\_TapEngine\_tapnetwork.verify\_tap\_eptarget \textit{(method)}, 
+		\hyperpage{8}
+    \subitem hpl\_tap\_engine.HplTapEngine \textit{(class)}, 
+		\hyperpage{5--6}
+      \subsubitem hpl\_tap\_engine.HplTapEngine.close \textit{(method)}, 
+		\hyperpage{6}
+      \subsubitem hpl\_tap\_engine.HplTapEngine.get\_final\_tap\_data\_register \textit{(method)}, 
+		\hyperpage{6}
+      \subsubitem hpl\_tap\_engine.HplTapEngine.send\_cmd \textit{(method)}, 
+		\hyperpage{6}
+      \subsubitem hpl\_tap\_engine.HplTapEngine.TransactGotoState \textit{(method)}, 
+		\hyperpage{6}
+      \subsubitem hpl\_tap\_engine.HplTapEngine.transactor\_label\_assignment \textit{(method)}, 
+		\hyperpage{6}
+      \subsubitem hpl\_tap\_engine.HplTapEngine.transactor\_strobe\_properties\_assignment \textit{(method)}, 
+		\hyperpage{6}
+      \subsubitem hpl\_tap\_engine.HplTapEngine.TransactShiftDr \textit{(method)}, 
+		\hyperpage{6}
+      \subsubitem hpl\_tap\_engine.HplTapEngine.TransactShiftIr \textit{(method)}, 
+		\hyperpage{6}
+  \item hpl\_tap\_engine\_structs \textit{(module)}, \hyperpage{9--11}
+    \subitem hpl\_tap\_engine\_structs.hpl\_ta\_history \textit{(class)}, 
+		\hyperpage{10--11}
+      \subsubitem hpl\_tap\_engine\_structs.hpl\_ta\_history.add \textit{(method)}, 
+		\hyperpage{10}
+      \subsubitem hpl\_tap\_engine\_structs.hpl\_ta\_history.get \textit{(method)}, 
+		\hyperpage{10}
+      \subsubitem hpl\_tap\_engine\_structs.hpl\_ta\_history.has \textit{(method)}, 
+		\hyperpage{10}
+      \subsubitem hpl\_tap\_engine\_structs.hpl\_ta\_history.has\_field \textit{(method)}, 
+		\hyperpage{10}
+    \subitem hpl\_tap\_engine\_structs.hpl\_tap\_engine\_params \textit{(class)}, 
+		\hyperpage{11}
+    \subitem hpl\_tap\_engine\_structs.hpl\_tap\_transactor\_entry \textit{(class)}, 
+		\hyperpage{9--10}
+  \item hpl\_tap\_spf\_api \textit{(module)}, \hyperpage{12--14}
+    \subitem hpl\_tap\_spf\_api.get\_tap\_transactions \textit{(function)}, 
+		\hyperpage{12}
+    \subitem hpl\_tap\_spf\_api.HplTapSpfApi \textit{(class)}, 
+		\hyperpage{12--14}
+      \subsubitem hpl\_tap\_spf\_api.HplTapSpfApi.close \textit{(method)}, 
+		\hyperpage{13}
+      \subsubitem hpl\_tap\_spf\_api.HplTapSpfApi.get\_dr\_total\_length \textit{(method)}, 
+		\hyperpage{13}
+      \subsubitem hpl\_tap\_spf\_api.HplTapSpfApi.get\_field\_lsb \textit{(method)}, 
+		\hyperpage{13}
+      \subsubitem hpl\_tap\_spf\_api.HplTapSpfApi.get\_field\_msb \textit{(method)}, 
+		\hyperpage{13}
+      \subsubitem hpl\_tap\_spf\_api.HplTapSpfApi.get\_field\_reset\_value \textit{(method)}, 
+		\hyperpage{13}
+      \subsubitem hpl\_tap\_spf\_api.HplTapSpfApi.get\_full\_dr \textit{(method)}, 
+		\hyperpage{13}
+      \subsubitem hpl\_tap\_spf\_api.HplTapSpfApi.get\_full\_dr\_old \textit{(method)}, 
+		\hyperpage{13}
+      \subsubitem hpl\_tap\_spf\_api.HplTapSpfApi.get\_ir\_fields \textit{(method)}, 
+		\hyperpage{13}
+      \subsubitem hpl\_tap\_spf\_api.HplTapSpfApi.get\_ir\_opcode \textit{(method)}, 
+		\hyperpage{13}
+      \subsubitem hpl\_tap\_spf\_api.HplTapSpfApi.get\_rtl\_endpoint \textit{(method)}, 
+		\hyperpage{13}
+      \subsubitem hpl\_tap\_spf\_api.HplTapSpfApi.get\_tap\_PARDR \textit{(method)}, 
+		\hyperpage{13}
+      \subsubitem hpl\_tap\_spf\_api.HplTapSpfApi.get\_tap\_PARIR \textit{(method)}, 
+		\hyperpage{13}
+  \item htd\_hpl\_itpp\_interface \textit{(module)}, \hyperpage{15--17}
+    \subitem htd\_hpl\_itpp\_interface.hpl\_itpp\_interface \textit{(class)}, 
+		\hyperpage{15--17}
+      \subsubitem htd\_hpl\_itpp\_interface.hpl\_itpp\_interface.add\_comment \textit{(method)}, 
+		\hyperpage{15}
+      \subsubitem htd\_hpl\_itpp\_interface.hpl\_itpp\_interface.check\_signal \textit{(method)}, 
+		\hyperpage{16}
+      \subsubitem htd\_hpl\_itpp\_interface.hpl\_itpp\_interface.check\_tap\_ep \textit{(method)}, 
+		\hyperpage{16}
+      \subsubitem htd\_hpl\_itpp\_interface.hpl\_itpp\_interface.label \textit{(method)}, 
+		\hyperpage{16}
+      \subsubitem htd\_hpl\_itpp\_interface.hpl\_itpp\_interface.set\_pattern\_info \textit{(method)}, 
+		\hyperpage{15}
+      \subsubitem htd\_hpl\_itpp\_interface.hpl\_itpp\_interface.set\_signal \textit{(method)}, 
+		\hyperpage{16}
+      \subsubitem htd\_hpl\_itpp\_interface.hpl\_itpp\_interface.set\_signal\_pulse \textit{(method)}, 
+		\hyperpage{16}
+      \subsubitem htd\_hpl\_itpp\_interface.hpl\_itpp\_interface.ShiftDr \textit{(method)}, 
+		\hyperpage{16}
+      \subsubitem htd\_hpl\_itpp\_interface.hpl\_itpp\_interface.ShiftIr \textit{(method)}, 
+		\hyperpage{16}
+      \subsubitem htd\_hpl\_itpp\_interface.hpl\_itpp\_interface.signal\_force \textit{(method)}, 
+		\hyperpage{16}
+      \subsubitem htd\_hpl\_itpp\_interface.hpl\_itpp\_interface.signal\_peek \textit{(method)}, 
+		\hyperpage{16}
+      \subsubitem htd\_hpl\_itpp\_interface.hpl\_itpp\_interface.signal\_poke \textit{(method)}, 
+		\hyperpage{16}
+      \subsubitem htd\_hpl\_itpp\_interface.hpl\_itpp\_interface.signal\_unforce \textit{(method)}, 
+		\hyperpage{16}
+      \subsubitem htd\_hpl\_itpp\_interface.hpl\_itpp\_interface.signal\_wait \textit{(method)}, 
+		\hyperpage{16}
+      \subsubitem htd\_hpl\_itpp\_interface.hpl\_itpp\_interface.tap\_parameters\_instrumetal\_print \textit{(method)}, 
+		\hyperpage{16}
+      \subsubitem htd\_hpl\_itpp\_interface.hpl\_itpp\_interface.tap\_verify \textit{(method)}, 
+		\hyperpage{16}
+      \subsubitem htd\_hpl\_itpp\_interface.hpl\_itpp\_interface.to\_state \textit{(method)}, 
+		\hyperpage{16}
+      \subsubitem htd\_hpl\_itpp\_interface.hpl\_itpp\_interface.wait\_clock\_edge \textit{(method)}, 
+		\hyperpage{16}
+      \subsubitem htd\_hpl\_itpp\_interface.hpl\_itpp\_interface.wait\_clock\_modulo \textit{(method)}, 
+		\hyperpage{16}
+      \subsubitem htd\_hpl\_itpp\_interface.hpl\_itpp\_interface.wait\_clock\_num \textit{(method)}, 
+		\hyperpage{16}
+  \item htd\_hpl\_signal\_manager \textit{(module)}, \hyperpage{18--22}
+    \subitem htd\_hpl\_signal\_manager.hpl\_SignalManager \textit{(class)}, 
+		\hyperpage{18--19}
+      \subsubitem htd\_hpl\_signal\_manager.hpl\_SignalManager.extract\_full\_signal\_path \textit{(method)}, 
+		\hyperpage{19}
+      \subsubitem htd\_hpl\_signal\_manager.hpl\_SignalManager.is\_interactive\_mode \textit{(method)}, 
+		\hyperpage{18}
+      \subsubitem htd\_hpl\_signal\_manager.hpl\_SignalManager.resize\_list \textit{(method)}, 
+		\hyperpage{19}
+      \subsubitem htd\_hpl\_signal\_manager.hpl\_SignalManager.signal\_check \textit{(method)}, 
+		\hyperpage{19}
+      \subsubitem htd\_hpl\_signal\_manager.hpl\_SignalManager.signal\_exists \textit{(method)}, 
+		\hyperpage{18}
+      \subsubitem htd\_hpl\_signal\_manager.hpl\_SignalManager.signal\_module\_exists \textit{(method)}, 
+		\hyperpage{19}
+      \subsubitem htd\_hpl\_signal\_manager.hpl\_SignalManager.signal\_peek \textit{(method)}, 
+		\hyperpage{19}
+      \subsubitem htd\_hpl\_signal\_manager.hpl\_SignalManager.signal\_poke \textit{(method)}, 
+		\hyperpage{19}
+    \subitem htd\_hpl\_signal\_manager.hpl\_SignalManager\_interactive \textit{(class)}, 
+		\hyperpage{19--20}
+    \subitem htd\_hpl\_signal\_manager.hpl\_SignalManager\_itpp \textit{(class)}, 
+		\hyperpage{21--22}
+    \subitem htd\_hpl\_signal\_manager.hpl\_SignalManager\_non\_interactive \textit{(class)}, 
+		\hyperpage{20--21}
+      \subsubitem htd\_hpl\_signal\_manager.hpl\_SignalManager\_non\_interactive.signal\_force \textit{(method)}, 
+		\hyperpage{20}
+      \subsubitem htd\_hpl\_signal\_manager.hpl\_SignalManager\_non\_interactive.signal\_pulse \textit{(method)}, 
+		\hyperpage{21}
+      \subsubitem htd\_hpl\_signal\_manager.hpl\_SignalManager\_non\_interactive.signal\_serial\_set \textit{(method)}, 
+		\hyperpage{21}
+      \subsubitem htd\_hpl\_signal\_manager.hpl\_SignalManager\_non\_interactive.signal\_unforce \textit{(method)}, 
+		\hyperpage{20}
+      \subsubitem htd\_hpl\_signal\_manager.hpl\_SignalManager\_non\_interactive.signal\_wait \textit{(method)}, 
+		\hyperpage{21}
+  \item htd\_player\_top \textit{(module)}, \hyperpage{23}
+  \item htd\_player\_ui \textit{(module)}, \hyperpage{24--26}
+    \subitem htd\_player\_ui.htd\_player\_ui \textit{(class)}, 
+		\hyperpage{25--26}
+      \subsubitem htd\_player\_ui.htd\_player\_ui.add\_comment \textit{(method)}, 
+		\hyperpage{25}
+      \subsubitem htd\_player\_ui.htd\_player\_ui.close \textit{(method)}, 
+		\hyperpage{25}
+      \subsubitem htd\_player\_ui.htd\_player\_ui.get\_full\_signal\_path \textit{(method)}, 
+		\hyperpage{25}
+      \subsubitem htd\_player\_ui.htd\_player\_ui.get\_ir\_name \textit{(method)}, 
+		\hyperpage{25}
+      \subsubitem htd\_player\_ui.htd\_player\_ui.get\_ir\_opcode\_int \textit{(method)}, 
+		\hyperpage{25}
+      \subsubitem htd\_player\_ui.htd\_player\_ui.get\_tapreg\_fields \textit{(method)}, 
+		\hyperpage{25}
+      \subsubitem htd\_player\_ui.htd\_player\_ui.set\_pattern\_info \textit{(method)}, 
+		\hyperpage{25}
+      \subsubitem htd\_player\_ui.htd\_player\_ui.signal\_check \textit{(method)}, 
+		\hyperpage{26}
+      \subsubitem htd\_player\_ui.htd\_player\_ui.signal\_force \textit{(method)}, 
+		\hyperpage{26}
+      \subsubitem htd\_player\_ui.htd\_player\_ui.signal\_module\_exists \textit{(method)}, 
+		\hyperpage{25}
+      \subsubitem htd\_player\_ui.htd\_player\_ui.signal\_peek \textit{(method)}, 
+		\hyperpage{25}
+      \subsubitem htd\_player\_ui.htd\_player\_ui.signal\_poke \textit{(method)}, 
+		\hyperpage{26}
+      \subsubitem htd\_player\_ui.htd\_player\_ui.signal\_pulse \textit{(method)}, 
+		\hyperpage{26}
+      \subsubitem htd\_player\_ui.htd\_player\_ui.signal\_serial\_set \textit{(method)}, 
+		\hyperpage{26}
+      \subsubitem htd\_player\_ui.htd\_player\_ui.signal\_unforce \textit{(method)}, 
+		\hyperpage{26}
+      \subsubitem htd\_player\_ui.htd\_player\_ui.signal\_wait \textit{(method)}, 
+		\hyperpage{26}
+      \subsubitem htd\_player\_ui.htd\_player\_ui.sync\_to\_clock\_modulo \textit{(method)}, 
+		\hyperpage{26}
+      \subsubitem htd\_player\_ui.htd\_player\_ui.tap\_send\_cmd \textit{(method)}, 
+		\hyperpage{25}
+      \subsubitem htd\_player\_ui.htd\_player\_ui.verify\_tap\_eptarget \textit{(method)}, 
+		\hyperpage{25}
+      \subsubitem htd\_player\_ui.htd\_player\_ui.wait\_clock\_edge \textit{(method)}, 
+		\hyperpage{26}
+      \subsubitem htd\_player\_ui.htd\_player\_ui.wait\_clock\_num \textit{(method)}, 
+		\hyperpage{26}
+    \subitem htd\_player\_ui.htd\_tap\_params \textit{(class)}, 
+		\hyperpage{24--25}
+
+\end{theindex}

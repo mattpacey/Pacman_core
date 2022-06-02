@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>hpl_tap_spf_api</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >hpl</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Module&nbsp;hpl_tap_spf_api
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="hpl_tap_spf_api-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="hpl_tap_spf_api-module.html">Module hpl_tap_spf_api</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">socket</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">sys</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">re</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">os</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">subprocess</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">htd_utilities</tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt>  </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Module hpl_tap_engine_structs=hpl_tap_engine_structs-module.html"><a title="hpl_tap_engine_structs" class="py-name" href="#" onclick="return doclink('link-0', 'hpl_tap_engine_structs', 'link-0');">hpl_tap_engine_structs</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-comment">#---------------------------------</tt> </tt>
+<a name="HplTapSpfApi"></a><div id="HplTapSpfApi-def"><a name="L10"></a><tt class="py-lineno">10</tt> <a class="py-toggle" href="#" id="HplTapSpfApi-toggle" onclick="return toggle('HplTapSpfApi');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="hpl_tap_spf_api.HplTapSpfApi-class.html">HplTapSpfApi</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HplTapSpfApi-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="HplTapSpfApi-expanded"><a name="HplTapSpfApi.__init__"></a><div id="HplTapSpfApi.__init__-def"><a name="L11"></a><tt class="py-lineno">11</tt> <a class="py-toggle" href="#" id="HplTapSpfApi.__init__-toggle" onclick="return toggle('HplTapSpfApi.__init__');">-</a><tt class="py-line">   <tt class="py-keyword">def</tt> <a class="py-def-name" href="hpl_tap_spf_api.HplTapSpfApi-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HplTapSpfApi.__init__-collapsed" style="display:none;" pad="++" indent="+++++++"></div><div id="HplTapSpfApi.__init__-expanded"><a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line">    <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line">    </tt>
+<a name="HplTapSpfApi.close"></a><div id="HplTapSpfApi.close-def"><a name="L14"></a><tt class="py-lineno">14</tt> <a class="py-toggle" href="#" id="HplTapSpfApi.close-toggle" onclick="return toggle('HplTapSpfApi.close');">-</a><tt class="py-line">   <tt class="py-keyword">def</tt> <a class="py-def-name" href="hpl_tap_spf_api.HplTapSpfApi-class.html#close">close</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HplTapSpfApi.close-collapsed" style="display:none;" pad="++" indent="+++++++"></div><div id="HplTapSpfApi.close-expanded"><a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line">        <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line">         </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line">   <tt class="py-comment">#------------------------</tt> </tt>
+<a name="HplTapSpfApi.get_field_msb"></a><div id="HplTapSpfApi.get_field_msb-def"><a name="L18"></a><tt class="py-lineno">18</tt> <a class="py-toggle" href="#" id="HplTapSpfApi.get_field_msb-toggle" onclick="return toggle('HplTapSpfApi.get_field_msb');">-</a><tt class="py-line">   <tt class="py-keyword">def</tt> <a class="py-def-name" href="hpl_tap_spf_api.HplTapSpfApi-class.html#get_field_msb">get_field_msb</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt><tt class="py-param">IR</tt><tt class="py-op">,</tt><tt class="py-param">field</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HplTapSpfApi.get_field_msb-collapsed" style="display:none;" pad="++" indent="+++++++"></div><div id="HplTapSpfApi.get_field_msb-expanded"><a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line">    <tt class="py-name">htdte_logger</tt><tt class="py-op">.</tt><tt class="py-name">error</tt><tt class="py-op">(</tt> <tt class="py-string">'get_field_msb not supported yet'</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line">    <tt class="py-comment"># use htd_logger.error instead of exception</tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line">   <tt class="py-comment">#------------------------------</tt> </tt>
+<a name="HplTapSpfApi.get_field_lsb"></a><div id="HplTapSpfApi.get_field_lsb-def"><a name="L22"></a><tt class="py-lineno">22</tt> <a class="py-toggle" href="#" id="HplTapSpfApi.get_field_lsb-toggle" onclick="return toggle('HplTapSpfApi.get_field_lsb');">-</a><tt class="py-line">   <tt class="py-keyword">def</tt> <a class="py-def-name" href="hpl_tap_spf_api.HplTapSpfApi-class.html#get_field_lsb">get_field_lsb</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt><tt class="py-param">IR</tt><tt class="py-op">,</tt><tt class="py-param">field</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HplTapSpfApi.get_field_lsb-collapsed" style="display:none;" pad="++" indent="+++++++"></div><div id="HplTapSpfApi.get_field_lsb-expanded"><a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line">    <tt class="py-name">htdte_logger</tt><tt class="py-op">.</tt><tt class="py-name">error</tt><tt class="py-op">(</tt> <tt class="py-string">'get_field_lsb not supported yet'</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line">   <tt class="py-comment">#--------------------</tt> </tt>
+<a name="HplTapSpfApi.get_field_reset_value"></a><div id="HplTapSpfApi.get_field_reset_value-def"><a name="L25"></a><tt class="py-lineno">25</tt> <a class="py-toggle" href="#" id="HplTapSpfApi.get_field_reset_value-toggle" onclick="return toggle('HplTapSpfApi.get_field_reset_value');">-</a><tt class="py-line">   <tt class="py-keyword">def</tt> <a class="py-def-name" href="hpl_tap_spf_api.HplTapSpfApi-class.html#get_field_reset_value">get_field_reset_value</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt><tt class="py-param">IR</tt><tt class="py-op">,</tt><tt class="py-param">field</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HplTapSpfApi.get_field_reset_value-collapsed" style="display:none;" pad="++" indent="+++++++"></div><div id="HplTapSpfApi.get_field_reset_value-expanded"><a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line">    <tt class="py-name">htdte_logger</tt><tt class="py-op">.</tt><tt class="py-name">error</tt><tt class="py-op">(</tt> <tt class="py-string">'get_field_reset not supported yet'</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line">   <tt class="py-comment">#--------------------</tt> </tt>
+<a name="HplTapSpfApi.get_ir_opcode"></a><div id="HplTapSpfApi.get_ir_opcode-def"><a name="L28"></a><tt class="py-lineno">28</tt> <a class="py-toggle" href="#" id="HplTapSpfApi.get_ir_opcode-toggle" onclick="return toggle('HplTapSpfApi.get_ir_opcode');">-</a><tt class="py-line">   <tt class="py-keyword">def</tt> <a class="py-def-name" href="hpl_tap_spf_api.HplTapSpfApi-class.html#get_ir_opcode">get_ir_opcode</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt><tt class="py-param">IR</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HplTapSpfApi.get_ir_opcode-collapsed" style="display:none;" pad="++" indent="+++++++"></div><div id="HplTapSpfApi.get_ir_opcode-expanded"><a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line">    <tt class="py-name">htdte_logger</tt><tt class="py-op">.</tt><tt class="py-name">error</tt><tt class="py-op">(</tt> <tt class="py-string">'get_ir_opcode not supported yet'</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line">   <tt class="py-comment">#--------------------</tt> </tt>
+<a name="HplTapSpfApi.get_ir_fields"></a><div id="HplTapSpfApi.get_ir_fields-def"><a name="L31"></a><tt class="py-lineno">31</tt> <a class="py-toggle" href="#" id="HplTapSpfApi.get_ir_fields-toggle" onclick="return toggle('HplTapSpfApi.get_ir_fields');">-</a><tt class="py-line">   <tt class="py-keyword">def</tt> <a class="py-def-name" href="hpl_tap_spf_api.HplTapSpfApi-class.html#get_ir_fields">get_ir_fields</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt><tt class="py-param">IR</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HplTapSpfApi.get_ir_fields-collapsed" style="display:none;" pad="++" indent="+++++++"></div><div id="HplTapSpfApi.get_ir_fields-expanded"><a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line">    <tt class="py-name">htdte_logger</tt><tt class="py-op">.</tt><tt class="py-name">error</tt><tt class="py-op">(</tt> <tt class="py-string">'get_ir_fields not supported yet'</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line">   <tt class="py-comment">#--------------------------</tt> </tt>
+<a name="HplTapSpfApi.get_dr_total_length"></a><div id="HplTapSpfApi.get_dr_total_length-def"><a name="L34"></a><tt class="py-lineno">34</tt> <a class="py-toggle" href="#" id="HplTapSpfApi.get_dr_total_length-toggle" onclick="return toggle('HplTapSpfApi.get_dr_total_length');">-</a><tt class="py-line">   <tt class="py-keyword">def</tt> <a class="py-def-name" href="hpl_tap_spf_api.HplTapSpfApi-class.html#get_dr_total_length">get_dr_total_length</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt><tt class="py-param">IR</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HplTapSpfApi.get_dr_total_length-collapsed" style="display:none;" pad="++" indent="+++++++"></div><div id="HplTapSpfApi.get_dr_total_length-expanded"><a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line">    <tt class="py-name">htdte_logger</tt><tt class="py-op">.</tt><tt class="py-name">error</tt><tt class="py-op">(</tt> <tt class="py-string">'get_dr_total_length not supported yet'</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line">   <tt class="py-comment">#--------------------------</tt> </tt>
+<a name="HplTapSpfApi.get_rtl_endpoint"></a><div id="HplTapSpfApi.get_rtl_endpoint-def"><a name="L37"></a><tt class="py-lineno">37</tt> <a class="py-toggle" href="#" id="HplTapSpfApi.get_rtl_endpoint-toggle" onclick="return toggle('HplTapSpfApi.get_rtl_endpoint');">-</a><tt class="py-line">   <tt class="py-keyword">def</tt> <a class="py-def-name" href="hpl_tap_spf_api.HplTapSpfApi-class.html#get_rtl_endpoint">get_rtl_endpoint</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt><tt class="py-param">TAP</tt><tt class="py-op">,</tt><tt class="py-param">IR</tt><tt class="py-op">,</tt><tt class="py-param">field</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HplTapSpfApi.get_rtl_endpoint-collapsed" style="display:none;" pad="++" indent="+++++++"></div><div id="HplTapSpfApi.get_rtl_endpoint-expanded"><a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">     <tt class="py-name">htdte_logger</tt><tt class="py-op">.</tt><tt class="py-name">error</tt><tt class="py-op">(</tt> <tt class="py-string">'get_rtl_endpoint not supported yet'</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">  <tt class="py-comment">#--------------------------</tt> </tt>
+<a name="HplTapSpfApi.get_full_dr"></a><div id="HplTapSpfApi.get_full_dr-def"><a name="L40"></a><tt class="py-lineno">40</tt> <a class="py-toggle" href="#" id="HplTapSpfApi.get_full_dr-toggle" onclick="return toggle('HplTapSpfApi.get_full_dr');">-</a><tt class="py-line">   <tt class="py-keyword">def</tt> <a class="py-def-name" href="hpl_tap_spf_api.HplTapSpfApi-class.html#get_full_dr">get_full_dr</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt><tt class="py-param">IR</tt><tt class="py-op">,</tt><tt class="py-param">field</tt><tt class="py-op">,</tt><tt class="py-param">field_dr</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HplTapSpfApi.get_full_dr-collapsed" style="display:none;" pad="++" indent="+++++++"></div><div id="HplTapSpfApi.get_full_dr-expanded"><a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">    <tt class="py-name">htdte_logger</tt><tt class="py-op">.</tt><tt class="py-name">error</tt><tt class="py-op">(</tt> <tt class="py-string">'get_full_dr not supported yet'</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------</tt> </tt>
+<a name="HplTapSpfApi.get_full_dr_old"></a><div id="HplTapSpfApi.get_full_dr_old-def"><a name="L43"></a><tt class="py-lineno">43</tt> <a class="py-toggle" href="#" id="HplTapSpfApi.get_full_dr_old-toggle" onclick="return toggle('HplTapSpfApi.get_full_dr_old');">-</a><tt class="py-line">   <tt class="py-keyword">def</tt> <a class="py-def-name" href="hpl_tap_spf_api.HplTapSpfApi-class.html#get_full_dr_old">get_full_dr_old</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt><tt class="py-param">IR</tt><tt class="py-op">,</tt><tt class="py-param">field</tt><tt class="py-op">,</tt><tt class="py-param">field_dr</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HplTapSpfApi.get_full_dr_old-collapsed" style="display:none;" pad="++" indent="+++++++"></div><div id="HplTapSpfApi.get_full_dr_old-expanded"><a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">    <tt class="py-name">htdte_logger</tt><tt class="py-op">.</tt><tt class="py-name">error</tt><tt class="py-op">(</tt> <tt class="py-string">'get_full_dr_old not supported yet'</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------</tt> </tt>
+<a name="HplTapSpfApi.get_tap_PARIR"></a><div id="HplTapSpfApi.get_tap_PARIR-def"><a name="L46"></a><tt class="py-lineno">46</tt> <a class="py-toggle" href="#" id="HplTapSpfApi.get_tap_PARIR-toggle" onclick="return toggle('HplTapSpfApi.get_tap_PARIR');">-</a><tt class="py-line">   <tt class="py-keyword">def</tt> <a class="py-def-name" href="hpl_tap_spf_api.HplTapSpfApi-class.html#get_tap_PARIR">get_tap_PARIR</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt><tt class="py-param">TAP</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HplTapSpfApi.get_tap_PARIR-collapsed" style="display:none;" pad="++" indent="+++++++"></div><div id="HplTapSpfApi.get_tap_PARIR-expanded"><a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line">    <tt class="py-name">htdte_logger</tt><tt class="py-op">.</tt><tt class="py-name">error</tt><tt class="py-op">(</tt> <tt class="py-string">'get_tap_PARIR not supported yet'</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------</tt> </tt>
+<a name="HplTapSpfApi.get_tap_PARDR"></a><div id="HplTapSpfApi.get_tap_PARDR-def"><a name="L49"></a><tt class="py-lineno">49</tt> <a class="py-toggle" href="#" id="HplTapSpfApi.get_tap_PARDR-toggle" onclick="return toggle('HplTapSpfApi.get_tap_PARDR');">-</a><tt class="py-line">   <tt class="py-keyword">def</tt> <a class="py-def-name" href="hpl_tap_spf_api.HplTapSpfApi-class.html#get_tap_PARDR">get_tap_PARDR</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt><tt class="py-param">TAP</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HplTapSpfApi.get_tap_PARDR-collapsed" style="display:none;" pad="++" indent="+++++++"></div><div id="HplTapSpfApi.get_tap_PARDR-expanded"><a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line">    <tt class="py-name">htdte_logger</tt><tt class="py-op">.</tt><tt class="py-name">error</tt><tt class="py-op">(</tt> <tt class="py-string">'get_tap_PARDR not supported yet'</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line">    <tt class="py-comment">#---------------------------------------</tt> </tt>
+<a name="get_tap_transactions"></a><div id="get_tap_transactions-def"><a name="L52"></a><tt class="py-lineno">52</tt> <a class="py-toggle" href="#" id="get_tap_transactions-toggle" onclick="return toggle('get_tap_transactions');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="hpl_tap_spf_api-module.html#get_tap_transactions">get_tap_transactions</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt><tt class="py-param">tap_params</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="get_tap_transactions-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="get_tap_transactions-expanded"><a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line">  <tt class="py-keyword">return</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+</div><a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >hpl</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Aug 26 14:16:45 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

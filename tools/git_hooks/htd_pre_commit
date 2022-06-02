@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# This is a global HTD pre-commit file
+# Any static calls to pre-commit scripts should go in here.
+# If there is anything that needs to be generated dynamically, it should be done in
+# pre_commit_hook_generator.py:get_htd_pre_commit_file_contents
+
+echo "HTD Global Pre-Commit File"
+echo ""
+
+exit 0
